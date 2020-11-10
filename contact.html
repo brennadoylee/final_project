@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" type="image/png" href="images/logo-icon.png"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/html5reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <title>Welcome to Flavor of the Week</title>
+  </head>
+  <body>
+    <a class = "skip" href="#contact-header">Skip to Main Content</a>
+    <header>
+      <img src="images/logo.png" alt="logo" id = "logo">
+      <nav>
+        <ul class="nav_links">
+            <li class="nav_item"><a href="index.html">Playlists</a></li>
+            <li class="nav_item"><a href="artists.html">Artists</a></li>
+            <li class="nav_item"><a href="news.html">News</a></li>
+            <li class="selected_nav_item"><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+  </header>
+  <main class="container" id="contact-header" tabindex="0">
+    <h1>We Want to hear from you!</h1>
+    <p>Here at Flavor of the Week, we love getting reccomendations from our audience. We want to tailor our site to you! Let us know your thoughts or any new music you are listening to.</p>
+    <div class="audience_photos">
+      <img img src="images/audience1.jpg" alt="audience1" style="width:300px;height:300px;">
+      <img img src="images/audience2.jpg" alt="audience2" style="width:300px;height:300px;">
+      <img img src="images/audience3.jpg" alt="audience3" style="width:300px;height:300px;">
+  <form action="https://formspree.io/f/myybjzge" method="POST"> <!--connect your code to form spree-->
+  <fieldset>
+    <legend>Contact Us</legend>
+    <label for = "name_id"> Your Name </label> <!--ad a lable to each text inside the feilds and add a distinct id-->
+    <input type="text" id = "name_id" placeholder="Enter Your Name" name = "name" required> <!--linek to the same id as above, add a name, and the word required mkes it a required feild-->
+
+    <label for = "email_id"> Your Email </label>
+    <input type="email" id = "email_id" name = "email">
+
+
+    <label for = "phone_id"> Your Phone Number </label> <!--add label with id-->
+    <input type="tel" id = "phone_id" name= "phone"> <!--add name and id-->
+
+
+    <label for = "mesg_id"> Leave A Message </label> <!--add label with id-->
+    <textarea name = "mesg" id = "mesg_id"></textarea> <!--add name and id-->
+
+    <!--<label for = "cbox_id"> Remember Me </label>  add label with id-->
+    <!--<input type="checkbox" name = "cbox" id = "cbox_id">  <!--add name and id-->
+
+    <input type="submit" value = "Submit the form Now!"> <!--add value for button-->
+  </fieldset>
+ </form>
+</main>
+
+<footer>
+    <p>Flavor of the Week <br/>
+      &copy; Brenna Doyle - Web Design 2020</p>
+  </footer>
+</body>
+</html>
