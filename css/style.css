@@ -1,0 +1,402 @@
+body{
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: 16pt; 
+  background-color: black;
+  overflow-x: hidden;
+  position: relative
+}
+
+h1{
+  font-size: 2em;
+  text-align: center;
+  line-height: 2;
+  color: #fff;
+}
+
+h2{
+  font-size: 1.5em;
+  text-align: center;
+  padding: 5px;
+  color: white;
+}
+
+p {
+  padding: 0 30px 30px;
+  color: #fff;
+  font-size: medium;
+  text-align: center;
+}
+a{
+  color: white;
+}
+a.skip{
+  background: white;
+  left: 0;
+  padding: 6px;
+  position: absolute;
+  top: -40px;
+  -webkit-transition: top 1s ease-out;
+  transition: top 1s ease-out;
+  z-index: 1;
+}
+
+a.skip:focus{
+  top:20px;
+  color: black;
+  text-decoration-style: solid;
+}
+
+*:focus{
+  border: 2px solid black;
+}
+
+footer{
+  background-color: #5a0028;
+  color: white;
+  padding: 30px;
+  text-align: center;
+}
+
+
+@keyframes pulse {
+	0% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+	}
+
+	70% {
+		transform: scale(1);
+		box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+	}
+
+	100% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+	}
+}
+
+#logo{
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
+	transform: scale(1);
+  animation: pulse 2s infinite;
+  max-width: 75%;
+  height: auto;
+}
+
+.playlists{
+    min-height: 200px;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;   
+    flex-wrap: wrap;  
+    flex-direction: column;
+}
+
+.spotify {
+  margin: 12px;
+  background: #fff;
+  border-radius: 7px;
+  padding: 0 0 50px 0;
+  flex-basis: 400px;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 30px;
+  text-align: center;
+}
+
+.card {
+  background-color: #f1f1f1;
+  padding: 10px;
+  flex: 50%;
+}
+
+.card > header{
+  background: white;
+  border: 2px solid #5a0028;
+  padding: 20px 0;
+  border-radius: 7px 7px 0 0;
+}
+
+.card > ul{
+  list-style: none;
+  padding: 0;
+}
+
+.card > ul li {
+  width: 90%;
+  margin: 20px auto;
+}
+
+.card button{
+  width: 90%;
+  height: 40px;
+  border: 0;
+  margin-left: 12px;
+  border-radius: 7px;
+  color: white;
+  font-size: 1em;
+}
+
+.card h3{
+  font-size: 1em;
+  color:#5a0028;
+  text-align: center;
+}
+
+
+.gallery{
+  display: flex; 
+  justify-content: center; 
+  align-items: center;   
+  flex-wrap: wrap;  
+  min-height: 500px;
+  padding-left: 50px;
+}
+
+.gallery > img{
+  border: 10px;
+  margin: 10px;
+  width: 400px;
+}
+
+.gallery img:hover {
+  animation: shake 0.5s;
+  border: 3px solid white;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+header{
+  background: #fff;
+  border-bottom: 3px solid #5a0028;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav_links{
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.nav_item a{
+  color: black;
+  text-decoration: none;
+}
+.selected_nav_item a{
+  color: black;
+  font-weight: bold;
+}
+
+.nav_item a:hover, a:focus{
+  color: #5a0028;
+  text-decoration: underline;
+  -webkit-text-decoration-style: dotted;
+          text-decoration-style: dotted;
+}
+
+.container {
+  display: block;
+}
+.news_container{
+  display: grid;
+  grid-template-rows: auto auto auto auto auto auto;
+}
+.grid-container > div {
+  text-align: center;
+  padding: 20px 20px;
+  font-size: 30px;
+}
+
+.news_text{
+  background-color: black;
+}
+.flip_flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.flip-card {
+  display: grid;
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: black;
+  color: white;
+  transform: rotateY(180deg);
+}
+.flip-card-back a{
+  color: white;
+}
+form {
+  border: 3px solid #f1f1f1;
+}
+
+legend{ 
+  font-size: 125%;
+  font-style:italic;
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+}
+
+label{
+  display: inline-block;
+  margin-right:10px;
+  width:15%;
+  color: white;
+}
+input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+span{
+  margin-left:20%;
+  font-family: italic;
+  font-weight: bold;
+}
+
+textarea{
+  width: 100%;
+  height: 35vh;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+
+input[type=checkbox]{
+    display:inline;
+    width:inherit;
+}
+
+input[type=submit] {
+  background-color: white;
+  color: black;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+input[type=submit]:hover {
+  opacity: 0.8;
+}
+
+.audience_photos{
+  min-height: 500px;
+  display: flex; 
+  justify-content: center; 
+  align-items: center;   
+  flex-wrap: wrap;  
+}
+
+@media screen and (min-width: 300px){
+  .gallery{
+    display: block;
+  }
+}
+@media screen and (min-width: 850px){
+
+  .spotify {
+    flex-basis: 225px;
+  }
+
+  header{ 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .nav_links{ 
+    display: flex;
+    flex-direction: row;
+  }
+
+  .nav_item a{
+    padding: 10px;
+  }
+
+form{
+  width: 80%;
+  margin: 0 auto;
+}
+
+input{
+  width:80%;
+}
+
+textarea{
+  width:80%;
+  height: 25vh;
+}
+
+div + label{
+  line-height: 25vh;
+  vertical-align:top;
+}
+}
+
+@media screen and (prefers-reduced-motion: reduce){
+  #logo{
+    animation: none;
+  }
+}
