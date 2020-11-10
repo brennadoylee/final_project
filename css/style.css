@@ -155,7 +155,6 @@ footer{
   align-items: center;   
   flex-wrap: wrap;  
   min-height: 500px;
-  padding-left: 50px;
 }
 
 .gallery > img{
