@@ -16,6 +16,7 @@ h1{
 }
 
 h2{
+  margin-top: 20px;
   font-size: 1.5em;
   text-align: center;
   padding: 5px;
@@ -28,6 +29,7 @@ p {
   font-size: medium;
   text-align: center;
 }
+
 a{
   color: white;
 }
@@ -54,8 +56,9 @@ a.skip:focus{
 
 footer{
   background-color: #5a0028;
+  margin-top: 10px;
   color: white;
-  padding: 30px;
+  padding: 50px;
   text-align: center;
 }
 
@@ -80,74 +83,31 @@ footer{
 #logo{
   box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
 	transform: scale(1);
-  animation: pulse 2s infinite;
+  animation: pulse 5s infinite;
   max-width: 75%;
   height: auto;
 }
 
-.playlists{
-    min-height: 200px;
-    display: flex; 
-    justify-content: center; 
-    align-items: center;   
-    flex-wrap: wrap;  
-    flex-direction: column;
+.parallax{
+  background-attachment: fixed;      
+  background-position: center;  
+  background-repeat: no-repeat; 
+  background-size: cover;       
+  color: black;
+  height: 500px;                
+  background-image: url('../images/header.jpg');
 }
-
-.spotify {
-  margin: 12px;
-  background: #fff;
-  border-radius: 7px;
-  padding: 0 0 50px 0;
-  flex-basis: 400px;
+mark{
+  background-color: white;
+  color: black;
+  font-style: normal;
 }
-
 .flex-container {
   display: flex;
   flex-wrap: wrap;
   font-size: 30px;
   text-align: center;
 }
-
-.card {
-  background-color: #f1f1f1;
-  padding: 10px;
-  flex: 50%;
-}
-
-.card > header{
-  background: white;
-  border: 2px solid #5a0028;
-  padding: 20px 0;
-  border-radius: 7px 7px 0 0;
-}
-
-.card > ul{
-  list-style: none;
-  padding: 0;
-}
-
-.card > ul li {
-  width: 90%;
-  margin: 20px auto;
-}
-
-.card button{
-  width: 90%;
-  height: 40px;
-  border: 0;
-  margin-left: 12px;
-  border-radius: 7px;
-  color: white;
-  font-size: 1em;
-}
-
-.card h3{
-  font-size: 1em;
-  color:#5a0028;
-  text-align: center;
-}
-
 
 .gallery{
   display: flex; 
@@ -166,6 +126,7 @@ footer{
 
 .gallery img:hover {
   animation: shake 0.5s;
+  filter: grayscale(100%);
   border: 3px solid white;
   animation-iteration-count: infinite;
 }
@@ -201,7 +162,7 @@ header{
   text-decoration: none;
 }
 .selected_nav_item a{
-  color: black;
+  color: #5a0028;
   font-weight: bold;
 }
 
@@ -216,18 +177,25 @@ header{
   display: block;
 }
 .news_container{
-  display: grid;
+  display: block;
+}
+
+.grid-container{
   grid-template-rows: auto auto auto auto auto auto;
 }
+.news_image{
+  background-color: white;
+}
+.news_text{
+  background-color: #5a0028;
+}
+
 .grid-container > div {
   text-align: center;
   padding: 20px 20px;
   font-size: 30px;
 }
 
-.news_text{
-  background-color: black;
-}
 .flip_flex {
   display: flex;
   flex-wrap: wrap;
@@ -272,7 +240,7 @@ header{
 }
 
 .flip-card-back {
-  background-color: black;
+  background-color: #5a0028;
   color: white;
   transform: rotateY(180deg);
 }
@@ -349,16 +317,17 @@ input[type=submit]:hover {
   flex-wrap: wrap;  
 }
 
-@media screen and (min-width: 300px){
-  .gallery{
-    display: block;
-    overflow: hidden;
-  }
-}
 @media screen and (min-width: 850px){
-
-  .spotify {
-    flex-basis: 225px;
+  .grid-container{
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: auto auto auto;
+  }
+  .news_image{
+    grid-column-start: 1 / span 1;
+  }
+  .news_text{
+    grid-column-start: 2 / span 1;
   }
 
   header{ 
@@ -374,6 +343,9 @@ input[type=submit]:hover {
 
   .nav_item a{
     padding: 10px;
+  }
+  .grid-container{
+    grid-template-rows: auto auto auto auto auto auto;
   }
 
 form{
@@ -399,5 +371,18 @@ div + label{
 @media screen and (prefers-reduced-motion: reduce){
   #logo{
     animation: none;
+  }
+  .gallery img:hover{
+    animation: none;
+  }
+  .flip-card-inner{
+    transition: none;
+  }
+  .parallax{
+    background-attachment: initial;
+}
+  a.skip{
+    -webkit-transition: none; /* sets to default setting */
+    transition: none;        /* sets to default setting */
   }
 }
