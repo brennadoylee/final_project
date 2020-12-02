@@ -17,6 +17,7 @@ h1{
 
 h2{
   margin-top: 20px;
+  margin-bottom: 20px;
   font-size: 1.5em;
   text-align: center;
   padding: 5px;
@@ -34,7 +35,8 @@ a{
   color: white;
 }
 a.skip{
-  background: white;
+  background-color: black;
+  color: white;
   left: 0;
   padding: 6px;
   position: absolute;
@@ -46,7 +48,7 @@ a.skip{
 
 a.skip:focus{
   top:20px;
-  color: black;
+  color: white;
   text-decoration-style: solid;
 }
 
@@ -167,7 +169,6 @@ header{
 }
 
 .nav_item a:hover, a:focus{
-  color: #5a0028;
   text-decoration: underline;
   -webkit-text-decoration-style: dotted;
           text-decoration-style: dotted;
@@ -181,10 +182,12 @@ header{
 }
 
 .grid-container{
+  display: grid;
   grid-template-rows: auto auto auto auto auto auto;
 }
-.news_image{
+.beer_image, .maluma_image, .zara_image{
   background-color: white;
+  overflow: hidden;
 }
 .news_text{
   background-color: #5a0028;
@@ -203,7 +206,7 @@ header{
 }
 
 .flip-card {
-  display: grid;
+  display: flex;
   background-color: transparent;
   width: 300px;
   height: 300px;
@@ -239,14 +242,20 @@ header{
   color: black;
 }
 
+.flip-card-front img{
+  width:300px;
+  height:300px;
+}
+
 .flip-card-back {
   background-color: #5a0028;
   color: white;
   transform: rotateY(180deg);
 }
-.flip-card-back a{
+.flip-card-back a:focus{
   color: white;
 }
+
 form {
   border: 3px solid #f1f1f1;
 }
@@ -309,28 +318,105 @@ input[type=submit]:hover {
   opacity: 0.8;
 }
 
-.audience_photos{
-  min-height: 500px;
-  display: flex; 
-  justify-content: center; 
-  align-items: center;   
-  flex-wrap: wrap;  
+.grid2{
+  display: grid;
+  justify-content: center;
+  grid-template-rows: auto auto auto auto auto; 
 }
 
-@media screen and (min-width: 850px){
+@media screen and (min-width: 500px){
   .grid-container{
     display: grid;
     grid-template-rows: auto auto auto;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto;
   }
-  .news_image{
+  .beer_image, .maluma_image, .zara_image{
     grid-column-start: 1 / span 1;
   }
+  .news_text{
+    grid-column-start: 2 / span 2;
+  }
+  .grid2{
+    display: grid;
+    justify-content: center;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: auto auto;
+    }
+  .trevor{
+    grid-row: 1/auto;
+    grid-column: 1/auto;
+  }
+  .sarah{
+    grid-row: 1/auto;
+    grid-column: 2/auto;
+  }
+  .james{
+    grid-row: 2/auto;
+    grid-column: 1/auto;
+  }
+  .frank{
+    grid-row: 2/auto;
+    grid-column: 2/auto;
+  }
+  .derick{
+    grid-row: 3/auto;
+    grid-column: 1/auto;
+  }
+  .nav_links{ 
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+}
+@media screen and (min-width: 850px){
+  .grid-container{
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: auto auto auto;
+  }
+  .maluma_image{
+    grid-row: 1/auto;
+    grid-column: 1/auto;
+  }
+  .zara_image{
+    grid-row: 1/auto;
+    grid-column: 3/auto;
+  }
+  .beer_image{
+    grid-row: 2/auto;
+    grid-column: 2/auto;
+  }
+
   .news_text{
     grid-column-start: 2 / span 1;
   }
 
-
+  .grid2{
+    display: grid;
+    justify-content: center;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: auto auto auto;
+    }
+  .trevor{
+    grid-row: 1/auto;
+    grid-column: 1/auto;
+  }
+  .sarah{
+    grid-row: 3/auto;
+    grid-column: 1/auto;
+  }
+  .james{
+    grid-row: 2/auto;
+    grid-column: 2/auto;
+  }
+  .frank{
+    grid-row: 1/auto;
+    grid-column: 3/auto;
+  }
+  .derick{
+    grid-row: 3/auto;
+    grid-column: 3/auto;
+  }
   header{ 
     display: flex;
     flex-direction: row;
@@ -344,9 +430,6 @@ input[type=submit]:hover {
 
   .nav_item a{
     padding: 10px;
-  }
-  .grid-container{
-    grid-template-rows: auto auto auto auto auto auto;
   }
 
 form{

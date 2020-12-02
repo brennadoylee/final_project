@@ -34,10 +34,6 @@
   <main class="container" id="contact-header" tabindex="0">
     <h1>We want to hear from you!</h1>
     <p>Here at Flavor of the Week, we love getting reccomendations from our audience. We want to tailor our site to you! Let us know your thoughts or any new music you are listening to.</p>
-    <div class="audience_photos">
-      <img img src="images/audience1.jpg" alt="audience1" style="width:300px;height:300px;">
-      <img img src="images/audience2.jpg" alt="audience2" style="width:300px;height:300px;">
-      <img img src="images/audience3.jpg" alt="audience3" style="width:300px;height:300px;">
   <form action="https://formspree.io/f/myybjzge" method="POST"> <!--connect your code to form spree-->
   <fieldset>
     <legend>Contact Us</legend>
@@ -45,15 +41,15 @@
     <input type="text" id = "name_id" placeholder="Enter Your Name" name = "name" required> <!--linek to the same id as above, add a name, and the word required mkes it a required feild-->
 
     <label for = "email_id"> Your Email </label>
-    <input type="email" id = "email_id" name = "email">
+    <input type="email" id = "email_id" placeholder="example@email.com" name = "email">
 
 
     <label for = "phone_id"> Your Phone Number </label> <!--add label with id-->
-    <input type="tel" id = "phone_id" name= "phone"> <!--add name and id-->
+    <input type="tel" id = "phone_id" placeholder="XXX-XXX-XXXX"name= "phone"> <!--add name and id-->
 
 
     <label for = "mesg_id"> Leave A Message </label> <!--add label with id-->
-    <textarea name = "mesg" id = "mesg_id"></textarea> <!--add name and id-->
+    <textarea name = "mesg" id = "mesg_id" placeholder="Let us know your thoughts!"></textarea> <!--add name and id-->
 
     <!--<label for = "cbox_id"> Remember Me </label>  add label with id-->
     <!--<input type="checkbox" name = "cbox" id = "cbox_id">  <!--add name and id-->
@@ -61,6 +57,25 @@
     <input type="submit" value = "Submit the form Now!"> <!--add value for button-->
   </fieldset>
  </form>
+ <hr>
+ <h2>Check out some of the feedback we have gotten from previous users...</h2>
+ <div class="grid2">
+   <div class = "trevor">
+    <img img src="images/trevor.jpg" alt="trevor">
+   </div>
+   <div class = "sarah">
+    <img img src="images/sarah.jpg" alt="sarah">
+   </div>
+   <div class = "james">
+    <img img src="images/james.jpg" alt="james">
+   </div>
+   <div class = "frank">
+    <img img src="images/frank.jpg" alt="frank">
+   </div>
+   <div class = "derick">
+    <img img src="images/derick.jpg" alt="derick">
+   </div>
+ </div>
 </main>
 
 <footer>
