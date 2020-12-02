@@ -222,7 +222,7 @@ header{
   
 }
 
-.flip-card:hover .flip-card-inner {
+.flip-card:hover .flip-card-inner{
   transform: rotateY(180deg);
 }
 
@@ -329,6 +329,7 @@ input[type=submit]:hover {
   .news_text{
     grid-column-start: 2 / span 1;
   }
+
 
   header{ 
     display: flex;
